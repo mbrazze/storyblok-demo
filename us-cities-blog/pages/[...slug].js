@@ -5,13 +5,7 @@ import {
   getStoryblokApi,
   StoryblokComponent,
 } from '@storyblok/react';
-export default function Page({
-  story,
-  locales,
-  locale,
-  defaultLocale,
-  preview,
-}) {
+export default function Page({ story, locales, locale, defaultLocale }) {
   story = useStoryblokState(story, {
     language: locale,
   });

@@ -71,6 +71,16 @@ const Navigation = () => {
                 U.S. Cities
               </a>
             </Link>
+            <Link href="/en">
+              <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                en
+              </a>
+            </Link>
+            <Link href="/es">
+              <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                es
+              </a>
+            </Link>
           </div>
         </div>
       </div>
