@@ -1,13 +1,15 @@
 import Head from 'next/head';
+
 import {
   useStoryblokState,
   getStoryblokApi,
   StoryblokComponent,
 } from '@storyblok/react';
-import Layout from '../components/Layout';
 
 export default function Home({ story }) {
-  story = useStoryblokState(story);
+  story = useStoryblokState(story, {
+    resolveRelations: ['popular-articles.posts'],
+  });
 
   return (
     <div>
@@ -15,29 +17,32 @@ export default function Home({ story }) {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
-        <StoryblokComponent blok={story.content} />
-      </Layout>
+
+      <header>
+        <h1>{story ? story.name : 'My Site'}</h1>
+      </header>
+
+      <StoryblokComponent blok={story.content} />
     </div>
   );
 }
 
 export async function getStaticProps() {
+  //home is the default slug for the homepage in Storyblok
   let slug = 'home';
+
+  // Load the draft version
   let sbParams = {
-    version: 'draft', // or 'published'
-    resolve_links: 'url',
+    version: 'draft',
   };
 
   const storyblokApi = getStoryblokApi();
   let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
-  let { data: config } = await storyblokApi.get('cdn/stories/config');
 
   return {
     props: {
       story: data ? data.story : false,
       key: data ? data.story.id : false,
-      config: config ? config.story : false,
     },
     revalidate: 3600,
   };

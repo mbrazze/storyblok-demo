@@ -4,20 +4,14 @@ import Feature from '../components/Feature';
 import Grid from '../components/Grid';
 import Page from '../components/Page';
 import Teaser from '../components/Teaser';
-import Config from '../components/Config';
-import Layout from '../components/Layout';
-import HeaderMenu from '../components/HeaderMenu';
-import MenuLink from '../components/MenuLink';
+import City from '../components/City';
 
 const components = {
-  config: Config,
-  layout: Layout,
-  header_menu: HeaderMenu,
-  menu_link: MenuLink,
   feature: Feature,
   grid: Grid,
   teaser: Teaser,
   page: Page,
+  city: City,
 };
 
 storyblokInit({
