@@ -55,6 +55,7 @@ export async function getStaticProps({
 }
 export async function getStaticPaths({ locales }) {
   const storyblokApi = getStoryblokApi();
+  console.log('storyblokApi:', storyblokApi);
   let { data } = await storyblokApi.get('cdn/links/', {
     version: 'published',
   });
