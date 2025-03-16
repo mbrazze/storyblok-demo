@@ -13,8 +13,8 @@ export default function Page({ story }) {
         <title>{story ? story.name : 'My Site'}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout locales={locales} locale={locale} defaultLocale={defaultLocale}>
-        <StoryblokComponent blok={story.content} locale={locale} />
+      <Layout>
+        <StoryblokComponent blok={story.content} />
       </Layout>
     </div>
   );
@@ -47,10 +47,7 @@ export async function getStaticPaths() {
     }
     const slug = data.links[linkKey].slug;
     let splittedSlug = slug.split('/');
-
-    for (const locale of locales) {
-      paths.push({ params: { slug: splittedSlug } });
-    }
+    paths.push({ params: { slug: splittedSlug } });
   });
   return {
     paths: paths,
