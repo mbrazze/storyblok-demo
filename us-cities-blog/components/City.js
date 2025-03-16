@@ -15,7 +15,7 @@ const City = ({ blok }) => {
       const line1 = item?.content[0]?.content[0]?.text || '';
       const line2 = item?.content[0]?.content[1]?.text || '';
       return (
-        <li key={i} className="font-medium">
+        <li key={i} className="font-medium p-3">
           {line1} {line2}
         </li>
       );
@@ -56,7 +56,7 @@ const City = ({ blok }) => {
       {/* Pros & Cons */}
       <div className="mx-auto max-w-4xl">
         {/* Pros */}
-        <p className="font-bold">{prosTitle}</p>
+        <p className="font-bold p-3">{prosTitle}</p>
         <ul className="list-disc list-inside">{renderBulletItems(2)}</ul>
 
         {/* Cons */}
