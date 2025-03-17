@@ -56,19 +56,19 @@ const Navigation = () => {
                 About
               </a>
             </Link>
-            <Link href="/blog">
+            <Link href="/my-journey">
               <a className="text-base font-medium text-gray-500 hover:text-gray-900">
-                Blog
+                My Journey
               </a>
             </Link>
-            <Link href="/services">
+            <Link href="/contact">
               <a className="text-base font-medium text-gray-500 hover:text-gray-900">
-                Services
+                Contact
               </a>
             </Link>
             <Link href="/us-cities">
               <a className="text-base font-medium text-gray-500 hover:text-gray-900">
-                U.S. Cities
+                Top 5 U.S. Cities
               </a>
             </Link>
           </div>
@@ -126,25 +126,25 @@ const Navigation = () => {
                       </span>
                     </a>
                   </Link>
-                  <Link href="/blog">
+                  <Link href="/my-journey">
                     <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                       {/* <!-- Heroicon name: outline/cursor-click --> */}
                       <span className="ml-3 text-base font-medium text-gray-900">
-                        Blog
+                        My Journey
                       </span>
                     </a>
                   </Link>
-                  <Link href="/services">
+                  <Link href="/contact-me">
                     <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                       <span className="ml-3 text-base font-medium text-gray-900">
-                        Services
+                        Contact
                       </span>
                     </a>
                   </Link>
                   <Link href="/us-cities">
                     <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                       <span className="ml-3 text-base font-medium text-gray-900">
-                        U.S. Cities
+                        Top 5 U.S. Cities
                       </span>
                     </a>
                   </Link>

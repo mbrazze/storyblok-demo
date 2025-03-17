@@ -5,6 +5,9 @@ import Grid from '../components/Grid';
 import Page from '../components/Page';
 import Teaser from '../components/Teaser';
 import City from '../components/City';
+import Section from '../components/Section';
+import JourneySection from '../components/JourneySection';
+import ContactSection from '../components/ContactSection';
 
 const components = {
   feature: Feature,
@@ -12,10 +15,13 @@ const components = {
   teaser: Teaser,
   page: Page,
   city: City,
+  section: Section,
+  journeySection: JourneySection,
+  contactSection: ContactSection,
 };
 
 storyblokInit({
-  accessToken: process.env.NEXT_PUBIC_STORYBLOK_TOKEN,
+  accessToken: process.env.STORYBLOK_TOKEN,
   use: [apiPlugin],
   components,
   apiOptions: {
