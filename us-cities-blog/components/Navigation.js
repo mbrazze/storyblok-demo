@@ -61,11 +61,7 @@ const Navigation = () => {
                 My Journey
               </a>
             </Link>
-            <Link href="/contact">
-              <a className="text-base font-medium text-gray-500 hover:text-gray-900">
-                Contact
-              </a>
-            </Link>
+
             <Link href="/us-cities">
               <a className="text-base font-medium text-gray-500 hover:text-gray-900">
                 Top 5 U.S. Cities
@@ -134,13 +130,7 @@ const Navigation = () => {
                       </span>
                     </a>
                   </Link>
-                  <Link href="/contact-me">
-                    <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-                      <span className="ml-3 text-base font-medium text-gray-900">
-                        Contact
-                      </span>
-                    </a>
-                  </Link>
+
                   <Link href="/us-cities">
                     <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                       <span className="ml-3 text-base font-medium text-gray-900">
