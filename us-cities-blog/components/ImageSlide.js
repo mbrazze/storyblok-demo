@@ -8,7 +8,7 @@ const ImageSlide = (blok) => {
         {blok.images.map((img, i) => (
           <img
             key={i}
-            src={`${img.filename}/m/500x200`}
+            src={`${img.filename}/m/500x250`}
             alt={img.alt || img.title || 'image'}
             className="mx-auto block w-full h-auto"
           />
