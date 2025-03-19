@@ -67,6 +67,11 @@ const Navigation = () => {
                 Top 5 U.S. Cities
               </a>
             </Link>
+            <Link href="/contact">
+              <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                Contact
+              </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -136,6 +141,11 @@ const Navigation = () => {
                       <span className="ml-3 text-base font-medium text-gray-900">
                         Top 5 U.S. Cities
                       </span>
+                    </a>
+                  </Link>
+                  <Link href="/contact">
+                    <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                      Contact
                     </a>
                   </Link>
                 </nav>

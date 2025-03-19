@@ -2,6 +2,7 @@ import { storyblokEditable } from '@storyblok/react';
 import Link from 'next/link';
 
 const Section = ({ blok }) => {
+  console.log(blok);
   // Extract image and text segments from the Storyblok
   const imageUrl = blok?.image?.filename || '';
   const textSegments =
