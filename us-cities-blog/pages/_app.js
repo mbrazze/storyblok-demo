@@ -9,6 +9,8 @@ import Section from '../components/Section';
 import JourneySection from '../components/JourneySection';
 import ContactSection from '../components/ContactSection';
 import ImageSlide from '../components/imageSlide';
+
+// Components link to the bloks in Storyblok
 const components = {
   feature: Feature,
   grid: Grid,
@@ -21,6 +23,7 @@ const components = {
   imageSlide: ImageSlide,
 };
 
+// Initializes your Storyblok
 storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN,
   use: [apiPlugin],
