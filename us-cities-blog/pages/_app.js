@@ -8,6 +8,7 @@ import City from '../components/City';
 import Section from '../components/Section';
 import JourneySection from '../components/JourneySection';
 import ContactSection from '../components/ContactSection';
+import ImageSlide from '../components/imageSlide';
 const components = {
   feature: Feature,
   grid: Grid,
@@ -17,6 +18,7 @@ const components = {
   section: Section,
   journeySection: JourneySection,
   contactSection: ContactSection,
+  imageSlide: ImageSlide,
 };
 
 storyblokInit({
