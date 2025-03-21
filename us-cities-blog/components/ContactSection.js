@@ -2,15 +2,6 @@ import { storyblokEditable } from '@storyblok/react';
 import Link from 'next/link';
 
 const ContactSection = (blok) => {
-  // console.log(blok.blok.content.content[0].content[0].text);
-  // const textSegments = blok.blok.content?.content[0].content[0].text.map(
-  //   (segment) => segment.content[0]?.text
-  // );
-  // console.log(textSegments);
-  // const textSegments =
-  //   blok.blok?.content[0]?.content[0]?.text.map(
-  //     (segment) => segment.content[1]?.text
-  //   ) || [];
   return (
     <div {...storyblokEditable(blok)} className="text-center py-8">
       <div className="flex items-center justify-center space-x-3 mb-6">

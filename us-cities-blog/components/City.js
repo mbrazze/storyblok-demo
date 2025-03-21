@@ -56,11 +56,11 @@ const City = ({ blok }) => {
       {/* Pros & Cons */}
       <div className="mx-auto max-w-4xl">
         {/* Pros */}
-        <p className="font-bold p-3 text-red-600">{prosTitle}</p>
+        <p className="font-bold p-3 text-green-700">{prosTitle}</p>
         <ul className="list-disc list-inside">{renderBulletItems(2)}</ul>
 
         {/* Cons */}
-        <p className="mt-4 font-bold">{consTitle}</p>
+        <p className="mt-4 font-bold text-red-700">{consTitle}</p>
         <ul className="list-disc list-inside">{renderBulletItems(4)}</ul>
       </div>
     </div>
