@@ -25,7 +25,7 @@ const components = {
 
 // Initializes your Storyblok
 storyblokInit({
-  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN,
+  accessToken: process.env.STORYBLOK_TOKEN,
   use: [apiPlugin],
   components,
   apiOptions: {

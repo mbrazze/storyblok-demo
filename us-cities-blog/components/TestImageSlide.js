@@ -7,9 +7,9 @@ const ImageSlide = (blok) => {
         {blok.blok?.images?.map((img, i) => (
           <img
             key={i}
-            src={`${img.filename}/m/700x800`}
+            src={`${img.filename}/m/300x325`}
             alt={img.alt || img.title || 'Bryan Images'}
-            className=" mx-auto block w-auto h-full"
+            className=" mx-auto block w-full p-1"
           />
         ))}
       </div>
