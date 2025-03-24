@@ -60,7 +60,7 @@ const City = ({ blok }) => {
         <ul className="list-disc list-inside">{renderBulletItems(2)}</ul>
 
         {/* Cons */}
-        <p className="mt-4 font-bold text-red-700">{consTitle}</p>
+        <p className="mt-4 font-bold p-3 text-red-700">{consTitle}</p>
         <ul className="list-disc list-inside">{renderBulletItems(4)}</ul>
       </div>
     </div>
