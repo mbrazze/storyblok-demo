@@ -7,23 +7,7 @@ const Navigation = () => {
     <div className="relative bg-white border-b-2 border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center  py-6 md:justify-start md:space-x-10">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
-            <Link href="/">
-              <a>
-                <span className="sr-only">Storyblok</span>
-                <img
-                  className="h-20 w-auto sm:h-10 hidden sm:block"
-                  src="https://a.storyblok.com/f/88751/251x53/0d3909fe96/storyblok-primary.png"
-                  alt="Storyblok"
-                />
-                <img
-                  className="h-20 w-auto sm:h-10 sm:hidden"
-                  src="https://a.storyblok.com/f/88751/92x106/835caf912a/storyblok-logo.png"
-                  alt="Storyblok"
-                />
-              </a>
-            </Link>
-          </div>
+          <div className="flex justify-start lg:w-0 lg:flex-1"></div>
           <div className="-mr-2 -my-2 md:hidden">
             <button
               type="button"
@@ -51,6 +35,11 @@ const Navigation = () => {
             </button>
           </div>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 space-x-10">
+            <Link href="/">
+              <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                Home
+              </a>
+            </Link>
             <Link href="/about">
               <a className="text-base font-medium text-gray-500 hover:text-gray-900">
                 About
@@ -84,13 +73,7 @@ const Navigation = () => {
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
-                <div>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://a.storyblok.com/f/88751/92x106/835caf912a/storyblok-logo.png"
-                    alt="Storyblok"
-                  />
-                </div>
+                <div></div>
                 <div className="-mr-2">
                   <button
                     type="button"
@@ -120,6 +103,11 @@ const Navigation = () => {
               <div className="mt-6">
                 <nav className="grid gap-y-8">
                   <Link href="/about">
+                    <a className="ml-3 text-base font-medium text-gray-900">
+                      Home
+                    </a>
+                  </Link>
+                  <Link href="/about">
                     <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                       {/* <!-- Heroicon name: outline/chart-bar --> */}
                       <span className="ml-3 text-base font-medium text-gray-900">
@@ -144,7 +132,7 @@ const Navigation = () => {
                     </a>
                   </Link>
                   <Link href="/contact">
-                    <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                    <a className="ml-3 text-base font-medium text-gray-900">
                       Contact
                     </a>
                   </Link>
