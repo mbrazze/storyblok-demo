@@ -4,11 +4,11 @@ import Feature from '../components/Feature';
 import Grid from '../components/Grid';
 import Page from '../components/Page';
 import Teaser from '../components/Teaser';
-import City from '../components/City';
 import Section from '../components/Section';
 import JourneySection from '../components/JourneySection';
 import ContactSection from '../components/ContactSection';
 import ImageSlide from '../components/TestImageSlide';
+import ProjectSection from '../components/ProjectSection';
 
 // Components link to the bloks in Storyblok
 const components = {
@@ -16,7 +16,7 @@ const components = {
   grid: Grid,
   teaser: Teaser,
   page: Page,
-  city: City,
+  projectSection: ProjectSection,
   section: Section,
   journeySection: JourneySection,
   contactSection: ContactSection,
@@ -25,7 +25,7 @@ const components = {
 
 // Initializes your Storyblok
 storyblokInit({
-  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN,
+  accessToken: process.env.STORYBLOK_TOKEN,
   use: [apiPlugin],
   components,
   apiOptions: {
