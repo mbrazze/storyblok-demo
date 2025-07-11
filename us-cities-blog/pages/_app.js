@@ -9,6 +9,7 @@ import JourneySection from '../components/JourneySection';
 import ContactSection from '../components/ContactSection';
 import ImageSlide from '../components/TestImageSlide';
 import ProjectSection from '../components/ProjectSection';
+import Subheading from '../components/Subheading';
 
 // Components link to the bloks in Storyblok
 const components = {
@@ -21,6 +22,7 @@ const components = {
   journeySection: JourneySection,
   contactSection: ContactSection,
   imageSlide: ImageSlide,
+  subheading: Subheading,
 };
 
 // Initializes your Storyblok
