@@ -1,12 +1,9 @@
 import Head from 'next/head';
 import Layout from '../components/Layout';
-import {
-  useStoryblokState,
-  getStoryblokApi,
-  StoryblokComponent,
-} from '@storyblok/react';
+import { StoryblokComponent } from '@storyblok/react';
+import sbClient from '../lib/storyblokClient';
+
 export default function Page({ story }) {
-  story = useStoryblokState(story);
   return (
     <div>
       <Head>
@@ -19,13 +16,12 @@ export default function Page({ story }) {
     </div>
   );
 }
-export async function getStaticProps({ params, preview }) {
-  let slug = params.slug ? params.slug.join('/') : 'home';
-  let sbParams = {
+export async function getStaticProps({ params, preview = false }) {
+  const slug = params?.slug?.join('/') || 'home';
+  const { data } = await sbClient.get(`cdn/stories/${slug}`, {
     version: preview ? 'draft' : 'published',
-  };
-  const storyblokApi = getStoryblokApi();
-  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
+  });
+
   return {
     props: {
       story: data ? data.story : false,
@@ -36,8 +32,7 @@ export async function getStaticProps({ params, preview }) {
   };
 }
 export async function getStaticPaths() {
-  const storyblokApi = getStoryblokApi();
-  const { data } = await storyblokApi.get('cdn/links/', {
+  const { data } = await sbClient.get('cdn/links/', {
     version: 'published',
   });
   const paths = [];

@@ -1,14 +1,9 @@
 import Head from 'next/head';
-import {
-  useStoryblokState,
-  getStoryblokApi,
-  StoryblokComponent,
-} from '@storyblok/react';
+import { StoryblokComponent } from '@storyblok/react';
+import sbClient from '../lib/storyblokClient';
 import Layout from '../components/Layout';
 
 export default function Home({ story }) {
-  story = useStoryblokState(story);
-
   return (
     <div>
       <Head>
@@ -23,13 +18,10 @@ export default function Home({ story }) {
 }
 
 export async function getStaticProps() {
-  let slug = 'home';
-  let sbParams = {
+  const slug = 'home';
+  const { data } = await sbClient.get(`cdn/stories/${slug}`, {
     version: 'published',
-  };
-
-  const storyblokApi = getStoryblokApi();
-  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
+  });
 
   return {
     props: {
