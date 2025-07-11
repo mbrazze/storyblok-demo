@@ -12,7 +12,7 @@ export default function Home({ story }) {
   return (
     <div>
       <Head>
-        <title>My Personal Page</title>
+        <title>Bryan Beale</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
